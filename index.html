@@ -22,9 +22,10 @@
 
 
 </head>
+  <!--==================== Start Nav Bar==================-->
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light header ">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light header ">
         <a class="navbar-brand" href="#"><img style="width: 100px;" src="img/logo.music.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +35,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav space-between">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Artists<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" >Artists<span class="sr-only">(current)</span></a>
                 </li>
 
 
@@ -74,11 +75,46 @@
             </ul>
 
         </div>
-    </nav>
-    <div class="container-fluid background">
-    </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <img src="/img/logo.music.png" width="100px" height="70px" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                Services
+              </a>
+               <a class="dropdown-item" href="#">Photography</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">View Our Portfolio</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+ 
+      <!--==================== End Nav Bar==================-->
 
 
+
+  
+
+
+
+
+  <!--==================== Start Script Javascript Nav Bar==================-->
     <script>
         $(document).ready(function () {
             $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
@@ -109,31 +145,7 @@
             });
         });
     </script>
-
-    <div class="container-fluid">
-        <div class="flex-column d-flex justify-content-center align-items-center">
-            <h1>All ARTISTES</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum dicta, beatae cupiditate quibusdam mollitia
-                tempore corporis consequatur. Adipisci dolorem molestias odit magnam, eaque minima optio tempore dolorum
-                porro. Dolorum, alias.</p>
-            <div class="container-fluid">
-                <div class="row ">
-                    <div class="col-12 col-xl-4 col-md-6">
-                        <div class="test"> <img style="width: 100%;" src="img/drake.jpg" alt="art"></div>
-                    </div>
-                    <div class="col-12 col-xl-4 col-md-6">
-                        <div class="test"><img style="width: 100%;" src="img/post-malone.jpg" alt="post"></div>
-                    </div>
-                    <div class="col-12 col-xl-4 col-md-6">
-                        <div class="test"><img style="width: 100%;" src="img/snoop.jpg" alt="snoop"></div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-
+  <!--==================== End Script Javascript Nav Bar==================-->
 </body>
 
 </html>
