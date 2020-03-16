@@ -23,9 +23,24 @@
 
 </head>
 
-<body>
-    <div class="addfix"></div>
-    <nav class="navbar navbar-expand-lg navbar-light header ">
+<body id="body">
+    <div id="form">
+        <div class="form d-flex flex-column justify-content-center align-items-center">
+
+            <a onclick="document.getElementById('form').style.display='none';document.getElementById('body').classList.toggle('active')" class="butx"></a >
+            <h1>Fill The Form</h1>
+            <div class="inputs">
+                <input type="text" id="name" placeholder="ARTIST NAME">
+                <input type="text" id="pic" placeholder="ARTIST IMG (URL)">
+                <input type="text" id="descr" placeholder="DESCRIPTION ABOUT HIM">
+
+                <input type="button" id="submit" value="SUBMIT" onclick="display()">
+            </div>
+        </div>
+    </div>
+
+    <div id="addfix" class="addfix"> <button onclick="document.getElementById('form').style.display='flex';document.getElementById('body').classList.toggle('active')"></button></div>
+    <nav  class="navbar navbar-expand-lg navbar-light header ">
         <a class="navbar-brand" href="#"><img style="width: 100px;" src="img/logo.music.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +61,7 @@
                         Albums
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                        <li><a class="dropdown-item dropdown-toggle" href="#">DRAKE</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Submenu action</a></li>
                                 <li><a class="dropdown-item" href="#">Another submenu action</a></li>
@@ -54,7 +69,7 @@
 
                             </ul>
                         </li>
-                        <li><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                        <li><a class="dropdown-item dropdown-toggle" href="#">POST MALONE</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Submenu action</a></li>
                                 <li><a class="dropdown-item" href="#">Another submenu action</a></li>
@@ -62,7 +77,7 @@
 
                             </ul>
                         </li>
-                        <li><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                        <li><a class="dropdown-item dropdown-toggle" href="#">SNOOP DOGG</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Submenu action</a></li>
                                 <li><a class="dropdown-item" href="#">Another submenu action</a></li>
@@ -76,11 +91,12 @@
 
         </div>
     </nav>
-    <div class="container-fluid background">
+    <div  class="container-fluid background">
     </div>
 
 
     <script>
+        
         $(document).ready(function () {
             $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
                 var $el = $(this);
@@ -109,9 +125,11 @@
                 return false;
             });
         });
+
+        
     </script>
 
-    <div class="container-fluid vec">
+    <div  class="container-fluid vec">
         <div class="flex-column d-flex justify-content-center align-items-center incontainer">
             <h1>All ARTISTES</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum dicta, beatae cupiditate quibusdam mollitia
@@ -122,22 +140,25 @@
                     <div class="col-12 col-xl-4 col-md-6">
                         <div class="test">
                             <a href="#">
-                             <img class="image" style="width: 100%;" src="img/drake.jpg" alt="art">
-                            <div class="overlay">
-                                <div class="text">Drake</div>
-                              </div></a></div>
+                                <img class="image" style="width: 100%;" src="img/drake.jpg" alt="art">
+                                <div class="overlay">
+                                    <div class="text">Drake</div>
+                                </div>
+                            </a></div>
                     </div>
                     <div class="col-12 col-xl-4 col-md-6">
                         <div class="test"><a href="#"><img style="width: 100%;" src="img/post-malone.jpg" alt="post">
-                            <div class="overlay">
-                                <div class="text">Post Malone</div>
-                              </div> </a></div>
+                                <div class="overlay">
+                                    <div class="text">Post Malone</div>
+                                </div>
+                            </a></div>
                     </div>
                     <div class="col-12 col-xl-4 col-md-6">
                         <div class="test"><a href="#"><img style="width: 100%;" src="img/snoop.jpg" alt="snoop">
-                            <div class="overlay">
-                                <div class="text">Snoop Dogg</div>
-                              </div></a></div>
+                                <div class="overlay">
+                                    <div class="text">Snoop Dogg</div>
+                                </div>
+                            </a></div>
                     </div>
 
                 </div>
