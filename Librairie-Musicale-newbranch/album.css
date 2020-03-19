@@ -1,0 +1,96 @@
+body{
+    font-family: 'Poppins';
+
+}
+
+.header{
+    background-color: none ;
+}
+ 
+.header a {
+    color: black;
+    font-size: 16px;
+
+}
+.dropdown-menu a{
+    color: black ;
+}
+.navbar{
+    padding: 14px; 
+    width: 100%;  
+}
+
+.collapse{
+    margin: auto;
+
+}
+
+section{
+    padding: 30px;
+}
+
+/* Start Css Section 1*/
+.section1{
+   width: 90%;
+   margin: auto;
+}
+.card-text{
+    width: 100%;
+}
+
+.card{
+    border: 0px;
+}
+
+.card-img{
+    height: 430px;
+}
+
+.card-title{
+    font-family: 'Poppins Medium';
+    font-size: 30px;
+}
+
+.card-text1{
+    font-family: 'Poppins Light';
+    font-size: 20px;
+}
+
+/* End Css Section 1 */
+
+/* Start Css Section 2 */
+.container{
+    max-width: 96%;
+    margin-top: 50px;
+    overflow: hidden;
+
+}
+.row{
+    margin: auto;
+    margin-top: 40px;
+}
+.container h1{
+   text-align: center; 
+}
+
+.card-album{
+    margin: auto;
+}
+.card-text{
+    font-size: 15px;
+    text-align: center;
+}
+
+.card-img-top{
+  
+}
+/* End Css Section 2 */
+
+
+
+.foot{
+    height: 10vh;
+    background-color: black;
+    color: white;
+}
+
