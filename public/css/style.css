@@ -5,7 +5,7 @@ body {
 
 .background {
   height: 100vh;
-  background-image: url('img/background.png');
+  background-image: url('../img/background.png');
   background-size: cover;
   background-position: center;
 }
@@ -132,10 +132,9 @@ body {
   z-index: 1;
 }
 
-.addfix img {}
 
 .addfix button {
-  background-image: url('img/fix.png');
+  background-image: url('../img/fix.png');
   width: 50px;
   height: 50px;
   background-position: center;
@@ -183,7 +182,7 @@ body {
 input {
   margin: 10px 0;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   width: 60%;
   background: none;
   background-color: #e4e4e4;
@@ -228,7 +227,7 @@ input:focus {
   position: absolute;
   top: 0;
   right: 0;
-  background-image: url('img/black-x-png-1.png');
+  background-image: url('../img/black-x-png-1.png');
   background-position: center;
   background-size: 100%;
   width: 24px;

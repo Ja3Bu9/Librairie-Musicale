@@ -17,7 +17,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
 
@@ -29,13 +29,13 @@
 
             <a onclick="document.getElementById('form').style.display='none';document.getElementById('body').classList.toggle('active')" class="butx"></a >
             <h1>Fill The Form</h1>
-            <div class="inputs">
-                <input type="text" id="name" placeholder="ARTIST NAME">
-                <input type="text" id="pic" placeholder="ARTIST IMG (URL)">
-                <input type="text" id="descr" placeholder="DESCRIPTION ABOUT HIM">
+            <form class="inputs" method="POST" action="/artists">
+                <input type="text" name="name" id="name" placeholder="ARTIST NAME">
+                <input type="text" name="img" id="pic" placeholder="ARTIST IMG (URL)">
+                <input type="text" name="description" id="descr" placeholder="DESCRIPTION ABOUT HIM">
 
-                <input type="button" id="submit" value="SUBMIT" onclick="display()">
-            </div>
+                <input type="submit" id="submit" value="submit">
+            </form>
         </div>
     </div>
 
