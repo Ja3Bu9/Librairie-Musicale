@@ -3,7 +3,7 @@ const express = require('express');
 var path = require('path');
 const app = express();
 var fs = require('fs');
-const data = fs.readFileSync('data.json') 
+const data = fs.readFileSync('public/data.json') 
 var parsedata = JSON.parse(data);
 var bodyParser = require('body-parser')
 
@@ -55,7 +55,7 @@ app.post('/artists',urlencodedParser, (req,res)=>{
     parsedata  = JSON.stringify(parsedata, null ,2)
     
 
-    fs.writeFile("data.json", parsedata, (err, data)=>{
+    fs.writeFile("public/data.json", parsedata, (err, data)=>{
         if (err) throw err;
         console.log(`Saved to file ${parsedata}`);
         

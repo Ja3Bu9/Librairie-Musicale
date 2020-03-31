@@ -136,15 +136,16 @@
                 tempore corporis consequatur. Adipisci dolorem molestias odit magnam, eaque minima optio tempore dolorum
                 porro. Dolorum, alias.</p>
             <div class="container-fluid">
-                <div class="row marg">
-                    <div class="col-12 col-xl-4 col-md-6">
+                <div class="row marg" id="arts">
+                    <!-- <div class="col-12 col-xl-4 col-md-6">
                         <div class="test">
                             <a href="#">
                                 <img class="image" style="width: 100%;" src="img/drake.jpg" alt="art">
                                 <div class="overlay">
                                     <div class="text">Drake</div>
                                 </div>
-                            </a></div>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-12 col-xl-4 col-md-6">
                         <div class="test"><a href="#"><img style="width: 100%;" src="img/post-malone.jpg" alt="post">
@@ -159,13 +160,63 @@
                                     <div class="text">Snoop Dogg</div>
                                 </div>
                             </a></div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
         </div>
 
     </div>
+    <script>
+        var myRequest = new XMLHttpRequest();
+        var reslt = document.getElementById('arts');
+
+        myRequest.onreadystatechange = function(){
+            if(this.readyState === 4 && this.status === 200){
+                var myJsObject = JSON.parse(this.responseText);
+
+                for (var j =0 ; j < myJsObject.artists.length; j++){
+
+                var div1 = document.createElement('div');
+                var div2 = document.createElement('div');
+                var a = document.createElement('a');
+                var img = document.createElement('img');
+                var overlay = document.createElement('div');
+                var divtext = document.createElement('div');
+
+                div1.className = "col-12 col-xl-4 col-md-6";
+                console.log(div1)
+                div2.className = "test";
+                a.setAttribute("href", "#")
+                img.className = "image";
+                img.setAttribute("style","width: 100%;")
+                img.setAttribute("src",myJsObject.artists[j].img);
+                overlay.className = "overlay";
+                divtext.className = "text";
+
+                divtext.innerHTML = myJsObject.artists[j].name;
+                overlay.appendChild(divtext)
+                a.appendChild(img);
+                a.appendChild(overlay)
+                div2.appendChild(a);
+                div1.appendChild(div2)
+
+                reslt.appendChild(div1);
+
+
+            }
+
+
+
+
+
+            }
+        };
+
+        myRequest.open("GET", "data.json", true);
+        myRequest.send();
+    
+    </script>
     <footer class="container-fluid d-flex justify-content-center align-items-center incontainer foot">
         <span>All Rights Reserved ©</span>
     </footer>

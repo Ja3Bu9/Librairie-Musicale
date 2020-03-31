@@ -1,0 +1,28 @@
+{
+  "artists": [
+    {
+      "id": 1,
+      "name": "Drake",
+      "img": "img/drake.jpg",
+      "description": "test desr here"
+    },
+    {
+      "id": 2,
+      "name": "Post Malone",
+      "img": "img/post-malone.jpg",
+      "description": "uhiuhihihu"
+    },
+    {
+      "id": 2,
+      "name": "Snoop Dogg",
+      "img": "img/snoop.jpg",
+      "description": "uhiuhihihu"
+    },
+    {
+      "id": 4,
+      "name": "Rihanna",
+      "img": "https://www.leral.net/photo/art/grande/42678168-35492188.jpg?v=1581432659",
+      "description": "hhhjjuijj"
+    }
+  ]
+}
