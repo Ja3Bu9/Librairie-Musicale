@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Calling Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/icons/se1.png">
+    <!-- Calling Favicon -->
+    <!-- ********************* -->
+    <!-- CSS files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css" media="all">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" class="color-changing" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- End CSS files -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+</head>
+
+<body style="background: url(/img/icons/bg-ic_01.png);" id="body">
+    <div id="form">
+        <div class="form d-flex flex-column justify-content-center align-items-center">
+
+            <a onclick="document.getElementById('form').style.display='none';document.getElementById('body').classList.toggle('active')" class="butx"></a >
+            <h1>Fill The Form</h1>
+            <div class="inputs">
+                <input  id="input" type="text" id="name" placeholder="ARTIST NAME">
+                <input id="input" type="text" id="pic" placeholder="ARTIST IMG (URL)">
+                <input id="input" type="text" id="descr" placeholder="DESCRIPTION ABOUT HIM">
+
+                <input id="input" type="button" id="submit" value="SUBMIT" onclick="display()">
+            </div>
+        </div>
+    </div>
+
+    <div id="addfix" class="addfix">
+         <button onclick="document.getElementById('form').style.display='flex';
+                 document.getElementById('body').classList.toggle('active')">
+         </button>
+    </div>
+    <nav  class="navbar navbar-expand-lg navbar-light header ">
+        <a class="navbar-brand" href="#"><img style="width: 100px;" src="/img/logo/logo3.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav space-between">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" >Artists<span class="sr-only">(current)</span></a>
+                </li>
+
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Albums
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item dropdown-toggle" href="#">DRAKE</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                                <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+
+
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item dropdown-toggle" href="#">POST MALONE</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                                <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+
+
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item dropdown-toggle" href="#">SNOOP DOGG</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                                <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        
+    </nav>
+
+    <!--=========== End NavBar ============-->
+
+    <script>
+    
+        $(document).ready(function () {
+            $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+                var $el = $(this);
+                $el.toggleClass('active-dropdown');
+                var $parent = $(this).offsetParent(".dropdown-menu");
+                if (!$(this).next().hasClass('show')) {
+                    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                }
+                var $subMenu = $(this).next(".dropdown-menu");
+                $subMenu.toggleClass('show');
+
+                $(this).parent("li").toggleClass('show');
+
+                $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                    $('.dropdown-menu .show').removeClass("show");
+                    $el.removeClass('active-dropdown');
+                });
+
+                if (!$parent.parent().hasClass('navbar-nav')) {
+                    $el.next().css({
+                        "top": $el[0].offsetTop,
+                        "left": $parent.outerWidth() - 4
+                    });
+                }
+
+                return false;
+            });
+        });
+    </script> 
+
+
+ <!--=========== Start All Album ============-->
+ <section class="section1">
+ <div class="card mb-3 card-art" >
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4 col-xl-3">
+        <img src="/img/team/1.png"   height="500px" alt="...">
+      </div>
+      <div class=" col-12 col-md-8 col-xl-6">
+        <div class="card-body">
+          <h5 >Card title</h5>
+          <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa facere, architecto inventore ad, 
+              quidem magnam illum blanditiis ex sapiente repellendus velit maxime expedita eligendi quibusdam sed consequuntur quam? Facere,
+               praesentium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam velit, maiores doloremque reiciendis 
+               exercitationem nulla ratione incidunt repudiandae suscipit voluptatum omnis cupiditate? Nostrum iusto similique 
+               debitis iure commodi iste excepturi? </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!--=========== End Card Artiste ============-->
+
+
+
+<!--=========== Start All Album ============-->
+<!-- <section>
+    <div class="container">
+        <h1>All ALBUMS</h1>
+        <div class="row">
+           <div class="row-card">
+            <div class="col-12 col-xl-4">
+                <div class="card card-album">
+                   <img src="/img/library/art-2.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                        <h2 class="card-text">Name Album<h2>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-xl-4">
+                <div class="card card-album" style="width: 30rem;">
+                   <img src="/img/library/podcast-3.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                        <h2 class="card-text">Name Album<h2>
+                        </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-12 col-xl-6">
+                <div class="card card-album" style="width: 30rem;">
+                   <img src="/img/library/podcast-2.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                        <h2 class="card-text">Name Album<h2>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <div class="card card-album" style="width: 30rem;">
+                   <img src="/img/library/podcast-1.png" class="card-img-top" alt="...">
+                     <div class="card-body">
+                       <h2 class="card-text">Name Album<h2>
+                     </div>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+</section>
+=========== End All Album ============ -->
+ <!-- Latest release start -->
+ <section class="releases pt-80 bg-icons">
+    <div class="container">
+        <div class="row mb-40">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <p class="fs-25 f-700 lh-15 mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit Integer placerat massa vitae quam dapibus.</p>
+            </div>
+        </div>
+        <div class="row">
+            <% for(let product of products){ %>
+            <div class="col-lg-6 col-sm-6">
+                <div class="each-cds">
+                    <div class="cd-image">
+                        <a href="">
+                            <img src="img/cd/4.jpg" class="cd-cover" alt="">
+                            <img src="img/icons/cd.png" class="cd-back" alt="">
+                        </a>
+                    </div>
+                    <div class="cd-text">
+                        <h3><a href="" class="fs-23 f-900">Vintagiya</a></h3>
+                        <p>Vintage dream (album)</p>
+                    </div>
+                </div>
+            </div>
+
+           <% } %>
+        </div>
+    </div>
+</section>
+<!-- Latest release end -->
+
+
+
+
+
+ <!-- footer start -->
+ <footer class="footer-1" data-overlay="9" style="background-image: url('img/bg/footer.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 z-5 text-center">
+                <div class="footer-start pt-90 pb-90">
+                    <img src="img/logo/logo.music.png" alt="" height="100px">
+                    <ul class="footer-contacts mt-20 opacity-7">
+                        <li>Phone: +1234567890</li>
+                        <li>Email: libraryMusicale@example.com</li>
+                        <li>
+                            <ul class="social-icons white">
+                                <li> <a href=""><i class="fa fa-facebook-f"></i></a>
+                                </li>
+                                <li> <a href=""><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li> <a href=""><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li> <a href=""><i class="fa fa-google-plus"></i></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-end pt-30 pb-30">
+                    <a href="" class="scrol-tp opacity-0"><i class="fa fa-chevron-up"></i></a>
+                    <p>© YouCode Safi <a href="">Privacy Policy</a> | <a href="">Library Musicale</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer end -->
+
+
+
+</body>
+
+</html>
